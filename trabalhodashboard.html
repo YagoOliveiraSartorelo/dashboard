@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Notícias</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #dfdfdf;
+      font-family: Arial, sans-serif;
+      color: #333333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background: #333;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      flex: 1;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    main {
+      flex: 3;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    article {
+      flex: 1 1 300px;
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    article:hover {
+      transform: scale(1.03);
+    }
+
+    article img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    article h2 {
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    article p {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    article a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    article a:hover {
+      text-decoration: underline;
+    }
+
+    aside {
+      flex: 1;
+      min-width: 250px;
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    aside h3 {
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    aside ul {
+      list-style: none;
+    }
+
+    aside ul li {
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      main {
+        width: 100%;
+      }
+
+      aside {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Notícias em Dia</h1>
+    <p>As principais notícias do dia em um só lugar</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Esportes</a></li>
+      <li><a href="#">Tecnologia</a></li>
+      <li><a href="#">Política</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <main>
+      <article>
+        <img src="https://s2-oglobo.glbimg.com/s3wDmioD-KKGFYXZ5-g0xucL-TA=/0x0:1920x1087/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2024/n/w/NcG6LPTYyB1eVjU1BMNA/ia-e-info-etc.jpg" alt="Imagem da notícia 1">
+        <h2>Tecnologia avança cada vez mais no mercado</h2>
+        <p>Empresas investem em novas soluções digitais para melhorar a experiência dos usuários e aumentar a produtividade.</p>
+        <a href="#">Leia mais</a>
+      </article>
+
+      <article>
+        <img src="https://conhecimentocientifico.r7.com/wp-content/uploads/2021/06/historia-das-olimpiadas-origem-evolucao-e-acontecimentos.jpeg" alt="Imagem da notícia 2">
+        <h2>Campeonato movimenta o fim de semana</h2>
+        <p>Os jogos deste sábado prometem grandes emoções para os torcedores e disputas importantes na tabela.</p>
+        <a href="#">Leia mais</a>
+      </article>
+
+      <article>
+        <img src="https://neofeed.com.br/wp-content/uploads/2023/12/wall-street-1987-1200x675.jpg" alt="Imagem da notícia 3">
+        <h2>Economia apresenta sinais de recuperação</h2>
+        <p>Especialistas apontam crescimento em alguns setores e expectativa positiva para os próximos meses.</p>
+        <a href="#">Leia mais</a>
+      </article>
+
+      <article>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgohKgiBqo34i6dSEJwLSGlnpKR0yYaRDzEBkCz6mIqS8MsghKJdFIzRS3St8M74qRHLpMjkID6kmrvzn9czeBabTAEBWgahyDZyGdbv_omg2AaTSyRuBEfNuLAFJZPOY_ESUL3f1LopJDPXZ8mvJgY_4TvC_blNjlHq0H8KOQfC19FyLP190iy-l8MklCb/s1898/Banner%2001.png" alt="Imagem da notícia 4">
+        <h2>Educação recebe novos investimentos</h2>
+        <p>Projetos voltados para a melhoria das escolas e da qualidade do ensino estão ganhando destaque.</p>
+        <a href="#">Leia mais</a>
+      </article>
+    </main>
+
+    <aside>
+      <h3>Últimas Notícias</h3>
+      <ul>
+        <li>Nova descoberta científica chama atenção de pesquisadores</li>
+        <li>Time local conquista vitória importante no campeonato</li>
+        <li>Aplicativos facilitam a rotina dos estudantes</li>
+        <li>Clima deve mudar nos próximos dias em várias regiões</li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 - Unifev | Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
